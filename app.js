@@ -46,14 +46,12 @@ $(document).ready(function() {
 	function callLogin(event) {
 		event.preventDefault();
 		var body = makeBody();
-		console.log(body);
-		console.log(submitted);
 		if (body.email && body.password && !submitted) {
 			submitted = true;
 			$.ajax({
 				url: "https://jsonplaceholder.typicode.com/posts",
 				method: "POST",
-				data: makeBody(),
+				data: body,
 				dataType: "json",
 				success: handleSuccess,
 				error: handleAllErrors
