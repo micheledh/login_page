@@ -1,0 +1,31 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: #1ac6ff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#formContainer {
+	text-align: center;
+	padding: 15px;
+	border: solid black 1px;
+}
+
+.description {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.entry {
+	margin-bottom: 10px;
+}
+
+#message {
+	height: 30px;
+	margin-bottom: 15px;
+}
