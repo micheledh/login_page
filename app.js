@@ -16,7 +16,7 @@ $(document).ready(function() {
 		message.text("Login successful");
 	}
 
-	function handleBadCredentials() {
+	function handleUnauthorized() {
 		submitted = false;
 		message.css("color", "red");
 		message.text("Email address or Password is wrong");
@@ -29,8 +29,8 @@ $(document).ready(function() {
 	}
 
 	function handleAllErrors(jqXhr) {
-		if (jqXhr.status === 422) {
-			handleBadCredentials();
+		if (jqXhr.status === 401) {
+			handleUnauthorized();
 		} else {
 			handleDefaultError();
 		}
